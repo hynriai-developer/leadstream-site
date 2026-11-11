@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeadStream Systems | QR-Code Mini Websites That Capture Real Estate Leads</title>
+<meta name="description" content="LeadStream Systems builds mobile mini websites for real estate agents and brokerages. A personal intro video, guided landing pages, and QR codes that turn social media and signs into buyer, seller and renter leads.">
+<style>
+:root{--ink:#0b1b2b;--navy:#0f2a47;--teal:#12b5a6;--teal-d:#0e8f83;--sky:#e8f6f5;--gray:#5b6b7b;--line:#dbe4ec;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.3px;color:var(--navy)}
+.logo span{color:var(--teal)}
+nav a{margin-left:24px;font-size:.95rem;color:var(--gray);font-weight:500}
+nav a:hover{color:var(--navy)}
+.btn{display:inline-block;background:var(--teal);color:#fff;font-weight:700;padding:14px 26px;border-radius:10px;transition:.15s;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--teal-d);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.hero{background:linear-gradient(160deg,var(--navy),#16406b);color:#fff;padding:84px 0 92px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{color:var(--teal);font-weight:700;letter-spacing:1.5px;font-size:.8rem;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:2.9rem;line-height:1.1;letter-spacing:-1px;margin-bottom:20px}
+h1 em{font-style:normal;color:var(--teal)}
+.hero p.lead{font-size:1.15rem;color:#cfe0ee;max-width:560px;margin-bottom:30px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .ghost{color:#fff;border-color:#fff}
+.hero .ghost:hover{background:#fff;color:var(--navy)}
+.phone{width:270px;margin:0 auto;background:#0a1624;border-radius:34px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.screen{background:#fff;border-radius:24px;overflow:hidden;color:var(--ink)}
+.vid{background:linear-gradient(135deg,#1c4a78,#12b5a6);height:150px;display:flex;align-items:center;justify-content:center;position:relative}
+.vid:after{content:"";border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:8px;opacity:.95}
+.screen h4{padding:12px 14px 6px;font-size:.95rem}
+.screen .m{margin:6px 12px;padding:10px 12px;border-radius:8px;background:var(--sky);font-size:.82rem;font-weight:600;color:var(--navy);display:flex;justify-content:space-between}
+.screen .m b{color:var(--teal-d)}
+.screen .go{margin:10px 12px 14px;padding:11px;border-radius:8px;background:var(--teal);color:#fff;text-align:center;font-weight:700;font-size:.85rem}
+section{padding:80px 0}
+.alt{background:#f5f9fb}
+h2{font-size:2.1rem;letter-spacing:-.6px;color:var(--navy);line-height:1.2;margin-bottom:14px}
+.sub{color:var(--gray);font-size:1.08rem;max-width:680px;margin-bottom:44px}
+.center{text-align:center}.center .sub{margin-left:auto;margin-right:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.card .ic{width:46px;height:46px;border-radius:12px;background:var(--sky);color:var(--teal-d);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px;font-size:1.1rem}
+.card h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--gray);font-size:.98rem}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 18px;position:relative;text-align:center}
+.step:before{counter-increment:s;content:counter(s);display:flex;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;align-items:center;justify-content:center;margin:0 auto 12px}
+.step h3{font-size:1rem;color:var(--navy);margin-bottom:6px}
+.step p{font-size:.88rem;color:var(--gray)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.list{list-style:none}
+.list li{padding:10px 0 10px 34px;position:relative;color:var(--ink)}
+.list li:before{content:"✓";position:absolute;left:0;top:10px;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:.8rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+.funnel{background:var(--navy);border-radius:16px;padding:30px;color:#fff}
+.funnel .bar{margin:10px auto;padding:13px;border-radius:8px;text-align:center;font-weight:600;font-size:.95rem}
+.b1{background:#1c4a78;width:100%}.b2{background:#17819a;width:82%}.b3{background:#14a3a0;width:64%}.b4{background:var(--teal);width:46%;color:#06302c}
+.cta-band{background:linear-gradient(160deg,var(--navy),#16406b);color:#fff;text-align:center;padding:84px 0}
+.cta-band h2{color:#fff}.cta-band .sub{color:#cfe0ee;margin-left:auto;margin-right:auto}
+.contact{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{background:#08141f;color:#8fa3b5;padding:34px 0;font-size:.9rem;text-align:center}
+footer b{color:#fff}
+@media(max-width:900px){.hero .grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}h1{font-size:2.2rem}nav a:not(.btn){display:none}.phone{margin-top:20px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">LeadStream<span>Systems</span></a>
+    <nav>
+      <a href="#how">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#who">Who It's For</a>
+      <a class="btn" href="#demo" style="color:#fff;margin-left:24px;padding:10px 20px">Book a Demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Lead capture for real estate</div>
+      <h1>Turn every scan and every post into a <em>real estate lead.</em></h1>
+      <p class="lead">LeadStream Systems gives agents and brokerages a mobile mini website that introduces you on video, guides prospects step by step, and captures their information, whether they want to buy, sell or rent.</p>
+      <div class="cta">
+        <a class="btn" href="#demo">Book a Demo</a>
+        <a class="btn ghost" href="https://ashleybarrettrealtor.com" target="_blank" rel="noopener">See a Live Example</a>
+      </div>
+    </div>
+    <div>
+      <div class="phone"><div class="screen">
+        <div class="vid"></div>
+        <h4>Hi, I'm your agent. Let's find your next move.</h4>
+        <div class="m">Buying a home <b>→</b></div>
+        <div class="m">Selling my home <b>→</b></div>
+        <div class="m">Renting a property <b>→</b></div>
+        <div class="go">Get My Free Home Plan</div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap center">
+    <h2>One scan starts the conversation</h2>
+    <p class="sub">Every piece of your marketing points to a mobile site built for one job: moving a stranger closer to contacting you.</p>
+    <div class="steps">
+      <div class="step"><h3>Scan or Tap</h3><p>A QR code on a sign, flyer or card, or a link in a social post, opens your mini site on any phone.</p></div>
+      <div class="step"><h3>Meet You</h3><p>A short intro video builds trust before they ever call.</p></div>
+      <div class="step"><h3>Choose a Path</h3><p>A simple menu: buy, sell, rent, home value, or learn more.</p></div>
+      <div class="step"><h3>Get Value</h3><p>Each landing page offers something useful: a guide, a valuation, a search.</p></div>
+      <div class="step"><h3>Take Action</h3><p>They share their info and you get the lead right away.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="features">
+  <div class="wrap">
+    <div class="center">
+      <h2>Everything a prospect needs, nothing they don't</h2>
+      <p class="sub">Built mobile-first, because that's where your leads are.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ic">▶</div><h3>Video-first intro page</h3><p>Your face and your voice on the first screen. Prospects get to know the agent behind the brand.</p></div>
+      <div class="card"><div class="ic">☰</div><h3>Menu of landing pages</h3><p>Separate pages for buyers, sellers, renters and investors, each with one clear next step.</p></div>
+      <div class="card"><div class="ic">▣</div><h3>QR codes, ready to print</h3><p>Use them on yard signs, open house sheets, business cards, vehicle wraps and mailers.</p></div>
+      <div class="card"><div class="ic">@</div><h3>Social-media ready</h3><p>Drop your mini site link in Instagram, Facebook and TikTok bios and posts so every view can become a lead.</p></div>
+      <div class="card"><div class="ic">✎</div><h3>Lead capture forms</h3><p>Short, friendly forms that ask for just enough to follow up fast.</p></div>
+      <div class="card"><div class="ic">★</div><h3>Your brand, your domain</h3><p>Colors, photo, video and name tailored to each agent, so it looks like you and not a template.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap split">
+    <div>
+      <h2>Built for agents and brokerages</h2>
+      <p class="sub" style="margin-bottom:20px">Solo agents get a professional lead engine fast. Brokerages get a consistent, branded system for every agent on the team.</p>
+      <ul class="list">
+        <li>Launch a personal mini site for each agent</li>
+        <li>Consistent branding across your whole office</li>
+        <li>Separate paths for buyers, sellers and renters</li>
+        <li>Works with the marketing you already do: signs, cards, social</li>
+        <li>No technical skills needed on your end</li>
+      </ul>
+    </div>
+    <div class="funnel">
+      <div style="font-weight:700;margin-bottom:12px;text-align:center">Each step moves them closer</div>
+      <div class="bar b1">Scan the QR code / tap the link</div>
+      <div class="bar b2">Watch your intro video</div>
+      <div class="bar b3">Pick their path &amp; view the page</div>
+      <div class="bar b4">Share their info</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap center">
+    <h2>See it in action</h2>
+    <p class="sub">Here's an example of a LeadStream-style mini website: a video introduction followed by a menu leading to individual landing pages.</p>
+    <a class="btn" href="https://ashleybarrettrealtor.com" target="_blank" rel="noopener">Open the Example Site</a>
+  </div>
+</section>
+
+<div class="cta-band" id="demo">
+  <div class="wrap">
+    <h2>Ready to capture more leads?</h2>
+    <p class="sub">Tell us about your business and we'll show you how a LeadStream mini website would work for you or your brokerage.</p>
+    <div class="contact">
+      <a class="btn" href="tel:+17272377641">Call 727-237-7641</a>
+      <a class="btn ghost" style="color:#fff;border-color:#fff" href="mailto:jbarrettrealtor@gmail.com?subject=LeadStream%20Systems%20Demo%20Request">Email Us</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>LeadStream Systems</b> · Mobile lead-capture websites for real estate professionals</p>
+    <p style="margin-top:6px">LeadStream Systems is a product of Hynri LLC.</p>
+    <p style="margin-top:6px">© 2026 Hynri LLC. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
