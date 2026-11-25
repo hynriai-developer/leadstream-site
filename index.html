@@ -80,6 +80,23 @@ footer b{color:#fff}
 [hidden]{display:none!important}
 @media(max-width:900px){.hero .grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.cards.plans{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h1{font-size:2.2rem}nav a:not(.btn):not(.signin){display:none}.phone{margin-top:20px}}
 @media(max-width:560px){.cards.plans{grid-template-columns:1fr}}
+.compare-title{font-size:1.5rem;color:var(--navy);margin:56px 0 18px;scroll-margin-top:84px}
+.compare{width:100%;max-width:900px;margin:0 auto;border-collapse:separate;border-spacing:0;table-layout:fixed;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center}
+.compare th,.compare td{padding:11px 8px;border-bottom:1px solid var(--line);font-size:.95rem;overflow-wrap:break-word}
+.compare thead th{position:sticky;top:66px;background:var(--navy);color:#fff;font-weight:700;z-index:2}
+.compare thead th:first-child{width:44%;border-radius:13px 0 0 0}.compare thead th:last-child{border-radius:0 13px 0 0}
+.compare tbody th{text-align:left;font-weight:500;padding-left:18px}
+.compare .group th{background:var(--sky);color:var(--navy);font-weight:800;font-size:.82rem;letter-spacing:.8px;text-transform:uppercase}
+.compare tr:last-child th,.compare tr:last-child td{border-bottom:0}
+.compare tbody tr:last-child th{border-radius:0 0 0 13px}.compare tbody tr:last-child td:last-child{border-radius:0 0 13px 0}
+.compare .yes{color:var(--teal-d);font-weight:800;font-size:1.15rem}
+.compare .no{color:#9aa9b6}
+.compare .soon{display:inline-block;background:#fff4e0;color:#8a5200;border-radius:20px;padding:2px 9px;font-size:.75rem;font-weight:700}
+.compare-note{color:var(--gray);font-size:.9rem;max-width:900px;margin:14px auto 0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.compare tbody th,.compare tbody td{position:relative}
+@media(max-width:560px){.compare th,.compare td{padding:9px 2px;font-size:.82rem}.compare thead th{font-size:.66rem;padding-left:0;padding-right:0;white-space:nowrap;overflow-wrap:normal}.compare thead th:first-child{width:36%}.compare tbody th{padding-left:10px;padding-right:6px}.compare .group th{font-size:.72rem}.compare .soon{padding:1px 4px;font-size:.66rem}}
+@media(max-width:360px){.wrap .compare thead th{font-size:.58rem}.wrap .compare thead th:first-child{width:33%}}
 </style>
 </head>
 <body>
@@ -221,6 +238,40 @@ footer b{color:#fff}
         <a class="btn a-only" data-plan="premium-annual" href="https://buy.stripe.com/test_eVqaEY1rt2MvcY3fK86Na0b" hidden>Choose Premium</a>
       </div>
     </div>
+    <h3 class="compare-title" id="compare">What's included in each plan</h3>
+    <table class="compare" aria-labelledby="compare">
+      <thead>
+        <tr><th scope="col"><span class="sr">Feature</span></th><th scope="col">Free</th><th scope="col">Basic</th><th scope="col">Plus</th><th scope="col">Premium</th></tr>
+      </thead>
+      <tbody>
+          <tr class="group"><th colspan="5" scope="colgroup">Your mobile card</th></tr>
+          <tr><th scope="row">Mobile business card with your photo</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Save-to-contacts and share buttons</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Short web address and QR codes</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Buyer and seller tips pages with sign-up forms</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Consultation booking page</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Connect With Me page for your social links</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Sign-up form details emailed to you</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Online dashboard to edit your pages</th><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr class="group"><th colspan="5" scope="colgroup">Your brand</th></tr>
+          <tr><th scope="row">Your logo and brand colors</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Videos on your pages</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">About Me page</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr class="group"><th colspan="5" scope="colgroup">More lead pages</th></tr>
+          <tr><th scope="row">Separate buyer and seller menu pages</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Buyer questions page with video answers</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Home value request page</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Private showing request page</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Home search app page (with your app link)</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr class="group"><th colspan="5" scope="colgroup">Listings and open houses</th></tr>
+          <tr><th scope="row">Listing pages with QR codes for yard signs</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr><th scope="row">Open house pages with add-to-calendar</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td><td><span class="yes" aria-hidden="true">&#10003;</span><span class="sr">Included</span></td></tr>
+          <tr class="group"><th colspan="5" scope="colgroup">Coming soon</th></tr>
+          <tr><th scope="row">Desktop website at yourname<wbr>.istheagentfor<wbr>.me</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="soon" aria-hidden="true">Soon</span><span class="sr">Coming soon</span></td><td><span class="soon" aria-hidden="true">Soon</span><span class="sr">Coming soon</span></td></tr>
+          <tr><th scope="row">AI chatbot</th><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="no" aria-hidden="true">&ndash;</span><span class="sr">Not included</span></td><td><span class="soon" aria-hidden="true">Soon</span><span class="sr">Coming soon</span></td></tr>
+      </tbody>
+    </table>
+    <p class="compare-note">Free uses our standard navy and gold design. Items marked &ldquo;Soon&rdquo; are in development and not available yet.</p>
   </div>
 </section>
 
