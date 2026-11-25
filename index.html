@@ -74,8 +74,10 @@ footer b{color:#fff}
 .plan .price small{font-size:1rem;font-weight:600;color:var(--gray)}
 .plan .save{color:var(--teal-d);font-weight:700;font-size:.9rem;min-height:1.6em;margin-bottom:18px}
 .plan .btn{margin-top:auto}
+.cards.plans{grid-template-columns:repeat(4,1fr)}
 [hidden]{display:none!important}
-@media(max-width:900px){.hero .grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}h1{font-size:2.2rem}nav a:not(.btn){display:none}.phone{margin-top:20px}}
+@media(max-width:900px){.hero .grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.cards.plans{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}h1{font-size:2.2rem}nav a:not(.btn){display:none}.phone{margin-top:20px}}
+@media(max-width:560px){.cards.plans{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -188,7 +190,12 @@ footer b{color:#fff}
       <button type="button" data-period="m" aria-pressed="true">Monthly</button>
       <button type="button" data-period="a" aria-pressed="false">Annual</button>
     </div>
-    <div class="cards">
+    <div class="cards plans">
+      <div class="card plan">
+        <h3>Free</h3>
+        <div><p class="price">$0</p><p class="save"></p></div>
+        <a class="btn" href="#demo">Choose Free</a>
+      </div>
       <div class="card plan">
         <h3>Basic</h3>
         <div class="m-only"><p class="price">$7<small>/month</small></p><p class="save"></p></div>
