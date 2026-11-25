@@ -8,7 +8,7 @@
 <title>LeadStream Systems | QR-Code Mini Websites That Capture Real Estate Leads</title>
 <meta name="description" content="LeadStream Systems builds mobile mini websites for real estate agents and brokerages. A personal intro video, guided landing pages, and QR codes that turn social media and signs into buyer, seller and renter leads.">
 <style>
-:root{--ink:#0b1b2b;--navy:#0f2a47;--teal:#12b5a6;--teal-d:#0e8f83;--sky:#e8f6f5;--gray:#5b6b7b;--line:#dbe4ec;--white:#fff}
+:root{--ink:#0f242d;--navy:#0b3b4a;--red:#d92626;--red-d:#b51d1d;--orange:#ff9f43;--cyan:#00d4ff;--cyan-d:#07718c;--sky:#e9f6f9;--gray:#52666f;--line:#d8e4e8;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
@@ -16,41 +16,43 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.3px;color:var(--navy)}
-.logo span{color:var(--teal)}
+.logo{display:block;flex:none}.logo img{display:block;width:clamp(128px,37vw,196px);height:auto}
+@media(max-width:340px){.logo img{width:40px}}
 nav a{margin-left:24px;font-size:.95rem;color:var(--gray);font-weight:500}
 nav a:hover{color:var(--navy)}
 .nav nav{display:flex;align-items:center;white-space:nowrap}nav a.signin{color:var(--navy);font-weight:700}
-@media(max-width:430px){.nav .logo{font-size:1.05rem;line-height:1.15;margin-right:10px}.nav .logo span{display:block}nav a.signin{margin-left:0}nav a.btn{margin-left:12px!important;padding:9px 12px!important;font-size:.88rem}}
-.btn{display:inline-block;background:var(--teal);color:#fff;font-weight:700;padding:14px 26px;border-radius:10px;transition:.15s;border:0;cursor:pointer;font-size:1rem}
-.btn:hover{background:var(--teal-d);transform:translateY(-1px)}
+@media(max-width:430px){.nav .logo{margin-right:10px}nav a.signin{margin-left:0}nav a.btn{margin-left:12px!important;padding:9px 12px!important;font-size:.88rem}}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:14px 26px;border-radius:10px;transition:.15s;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--red-d);transform:translateY(-1px)}
+.hero .btn:not(.ghost),.cta-band .btn:not(.ghost){background:var(--orange);color:var(--navy)}
+.hero .btn:not(.ghost):hover,.cta-band .btn:not(.ghost):hover{background:#ffb266}
 .btn.ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}
 .btn.ghost:hover{background:var(--navy);color:#fff}
-.hero{background:linear-gradient(160deg,var(--navy),#16406b);color:#fff;padding:84px 0 92px}
+.hero{background:linear-gradient(160deg,var(--navy),#125366);color:#fff;padding:84px 0 92px}
 .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.eyebrow{color:var(--teal);font-weight:700;letter-spacing:1.5px;font-size:.8rem;text-transform:uppercase;margin-bottom:14px}
+.eyebrow{color:var(--orange);font-weight:700;letter-spacing:1.5px;font-size:.8rem;text-transform:uppercase;margin-bottom:14px}
 h1{font-size:2.9rem;line-height:1.1;letter-spacing:-1px;margin-bottom:20px}
-h1 em{font-style:normal;color:var(--teal)}
-.hero p.lead{font-size:1.15rem;color:#cfe0ee;max-width:560px;margin-bottom:30px}
+h1 em{font-style:normal;color:var(--orange)}
+.hero p.lead{font-size:1.15rem;color:#d3e8ee;max-width:560px;margin-bottom:30px}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero .ghost{color:#fff;border-color:#fff}
 .hero .ghost:hover{background:#fff;color:var(--navy)}
-.phone{width:270px;margin:0 auto;background:#0a1624;border-radius:34px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.phone{width:270px;margin:0 auto;background:#062029;border-radius:34px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
 .screen{background:#fff;border-radius:24px;overflow:hidden;color:var(--ink)}
-.vid{background:linear-gradient(135deg,#1c4a78,#12b5a6);height:150px;display:flex;align-items:center;justify-content:center;position:relative}
+.vid{background:linear-gradient(135deg,#0b3b4a,#07a9cc);height:150px;display:flex;align-items:center;justify-content:center;position:relative}
 .vid:after{content:"";border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:8px;opacity:.95}
 .screen h4{padding:12px 14px 6px;font-size:.95rem}
 .screen .m{margin:6px 12px;padding:10px 12px;border-radius:8px;background:var(--sky);font-size:.82rem;font-weight:600;color:var(--navy);display:flex;justify-content:space-between}
-.screen .m b{color:var(--teal-d)}
-.screen .go{margin:10px 12px 14px;padding:11px;border-radius:8px;background:var(--teal);color:#fff;text-align:center;font-weight:700;font-size:.85rem}
+.screen .m b{color:var(--red)}
+.screen .go{margin:10px 12px 14px;padding:11px;border-radius:8px;background:var(--red);color:#fff;text-align:center;font-weight:700;font-size:.85rem}
 section{padding:80px 0}
-.alt{background:#f5f9fb}
+.alt{background:#f4f9fa}
 h2{font-size:2.1rem;letter-spacing:-.6px;color:var(--navy);line-height:1.2;margin-bottom:14px}
 .sub{color:var(--gray);font-size:1.08rem;max-width:680px;margin-bottom:44px}
 .center{text-align:center}.center .sub{margin-left:auto;margin-right:auto}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
-.card .ic{width:46px;height:46px;border-radius:12px;background:var(--sky);color:var(--teal-d);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px;font-size:1.1rem}
+.card .ic{width:46px;height:46px;border-radius:12px;background:#fff1e1;color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px;font-size:1.1rem}
 .card h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
 .card p{color:var(--gray);font-size:.98rem}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
@@ -61,22 +63,23 @@ h2{font-size:2.1rem;letter-spacing:-.6px;color:var(--navy);line-height:1.2;margi
 .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .list{list-style:none}
 .list li{padding:10px 0 10px 34px;position:relative;color:var(--ink)}
-.list li:before{content:"✓";position:absolute;left:0;top:10px;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:.8rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+.list li:before{content:"✓";position:absolute;left:0;top:10px;width:22px;height:22px;border-radius:50%;background:var(--cyan-d);color:#fff;font-size:.8rem;display:flex;align-items:center;justify-content:center;font-weight:700}
 .funnel{background:var(--navy);border-radius:16px;padding:30px;color:#fff}
 .funnel .bar{margin:10px auto;padding:13px;border-radius:8px;text-align:center;font-weight:600;font-size:.95rem}
-.b1{background:#1c4a78;width:100%}.b2{background:#17819a;width:82%}.b3{background:#14a3a0;width:64%}.b4{background:var(--teal);width:46%;color:#06302c}
-.cta-band{background:linear-gradient(160deg,var(--navy),#16406b);color:#fff;text-align:center;padding:84px 0}
-.cta-band h2{color:#fff}.cta-band .sub{color:#cfe0ee;margin-left:auto;margin-right:auto}
+.b1{background:#17596d;width:100%}.b2{background:var(--cyan-d);width:82%}.b3{background:var(--red);width:64%}.b4{background:var(--orange);width:46%;color:var(--navy)}
+.cta-band{background:linear-gradient(160deg,var(--navy),#125366);color:#fff;text-align:center;padding:84px 0}
+.cta-band h2{color:#fff}.cta-band .sub{color:#d3e8ee;margin-left:auto;margin-right:auto}
 .contact{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-footer{background:#08141f;color:#8fa3b5;padding:34px 0;font-size:.9rem;text-align:center}
+footer{background:#062a35;color:#a3bcc5;padding:34px 0;font-size:.9rem;text-align:center}
 footer b{color:#fff}
+.footlogo{display:block;width:190px;height:auto;margin:0 auto 14px}
 .toggle{display:inline-flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:32px}
 .toggle button{border:0;background:transparent;color:var(--gray);font:inherit;font-weight:700;padding:9px 22px;border-radius:9px;cursor:pointer}
 .toggle button[aria-pressed="true"]{background:var(--navy);color:#fff}
 .plan{display:flex;flex-direction:column;text-align:center}
 .plan .price{font-size:2.6rem;font-weight:800;color:var(--navy);margin:6px 0 0}
 .plan .price small{font-size:1rem;font-weight:600;color:var(--gray)}
-.plan .save{color:var(--teal-d);font-weight:700;font-size:.9rem;min-height:1.6em;margin-bottom:18px}
+.plan .save{color:var(--red-d);font-weight:700;font-size:.9rem;min-height:1.6em;margin-bottom:18px}
 .plan .btn{margin-top:auto}
 .cards.plans{grid-template-columns:repeat(4,1fr)}
 [hidden]{display:none!important}
@@ -91,7 +94,7 @@ footer b{color:#fff}
 .compare .group th{background:var(--sky);color:var(--navy);font-weight:800;font-size:.82rem;letter-spacing:.8px;text-transform:uppercase}
 .compare tr:last-child th,.compare tr:last-child td{border-bottom:0}
 .compare tbody tr:last-child th{border-radius:0 0 0 13px}.compare tbody tr:last-child td:last-child{border-radius:0 0 13px 0}
-.compare .yes{color:var(--teal-d);font-weight:800;font-size:1.15rem}
+.compare .yes{color:var(--cyan-d);font-weight:800;font-size:1.15rem}
 .compare .no{color:#9aa9b6}
 .compare .lvl{color:var(--navy);font-weight:700;font-size:.9rem}
 .compare .soon{display:inline-block;background:#fff4e0;color:#8a5200;border-radius:20px;padding:2px 9px;font-size:.75rem;font-weight:700}
@@ -106,7 +109,7 @@ footer b{color:#fff}
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top">LeadStream<span>Systems</span></a>
+    <a class="logo" href="#top"><picture><source media="(max-width:340px)" srcset="/leadstream-icon.png"><img src="/leadstream-logo.png" width="900" height="185" alt="LeadStream Systems"></picture></a>
     <nav>
       <a href="#how">How It Works</a>
       <a href="#features">Features</a>
@@ -293,6 +296,7 @@ footer b{color:#fff}
 
 <footer>
   <div class="wrap">
+    <img class="footlogo" src="/leadstream-logo.png" width="900" height="185" alt="LeadStream Systems">
     <p><b>LeadStream Systems</b> · Mobile lead-capture websites for real estate professionals</p>
     <p style="margin-top:6px">LeadStream Systems is a product of Hynri LLC.</p>
     <p style="margin-top:6px">© 2026 Hynri LLC. All rights reserved.</p>
