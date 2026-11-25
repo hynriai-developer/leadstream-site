@@ -66,6 +66,15 @@ h2{font-size:2.1rem;letter-spacing:-.6px;color:var(--navy);line-height:1.2;margi
 .contact{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 footer{background:#08141f;color:#8fa3b5;padding:34px 0;font-size:.9rem;text-align:center}
 footer b{color:#fff}
+.toggle{display:inline-flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:32px}
+.toggle button{border:0;background:transparent;color:var(--gray);font:inherit;font-weight:700;padding:9px 22px;border-radius:9px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.plan{display:flex;flex-direction:column;text-align:center}
+.plan .price{font-size:2.6rem;font-weight:800;color:var(--navy);margin:6px 0 0}
+.plan .price small{font-size:1rem;font-weight:600;color:var(--gray)}
+.plan .save{color:var(--teal-d);font-weight:700;font-size:.9rem;min-height:1.6em;margin-bottom:18px}
+.plan .btn{margin-top:auto}
+[hidden]{display:none!important}
 @media(max-width:900px){.hero .grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}h1{font-size:2.2rem}nav a:not(.btn){display:none}.phone{margin-top:20px}}
 </style>
 </head>
@@ -78,6 +87,7 @@ footer b{color:#fff}
       <a href="#how">How It Works</a>
       <a href="#features">Features</a>
       <a href="#who">Who It's For</a>
+      <a href="#pricing">Pricing</a>
       <a class="btn" href="#demo" style="color:#fff;margin-left:24px;padding:10px 20px">Book a Demo</a>
     </nav>
   </div>
@@ -170,6 +180,40 @@ footer b{color:#fff}
   </div>
 </section>
 
+<section id="pricing">
+  <div class="wrap center">
+    <h2>Simple pricing</h2>
+    <p class="sub">Choose monthly or annual billing. No setup fee. Prices are before any applicable sales tax. Call or email us to get started.</p>
+    <div class="toggle" role="group" aria-label="Billing period">
+      <button type="button" data-period="m" aria-pressed="true">Monthly</button>
+      <button type="button" data-period="a" aria-pressed="false">Annual</button>
+    </div>
+    <div class="cards">
+      <div class="card plan">
+        <h3>Basic</h3>
+        <div class="m-only"><p class="price">$7<small>/month</small></p><p class="save"></p></div>
+        <div class="a-only" hidden><p class="price">$65<small>/year</small></p><p class="save">Save $19 a year</p></div>
+        <a class="btn m-only" data-plan="basic-monthly" href="#demo">Choose Basic</a>
+        <a class="btn a-only" data-plan="basic-annual" href="#demo" hidden>Choose Basic</a>
+      </div>
+      <div class="card plan">
+        <h3>Plus</h3>
+        <div class="m-only"><p class="price">$25<small>/month</small></p><p class="save"></p></div>
+        <div class="a-only" hidden><p class="price">$250<small>/year</small></p><p class="save">Save $50 a year</p></div>
+        <a class="btn m-only" data-plan="plus-monthly" href="#demo">Choose Plus</a>
+        <a class="btn a-only" data-plan="plus-annual" href="#demo" hidden>Choose Plus</a>
+      </div>
+      <div class="card plan">
+        <h3>Premium</h3>
+        <div class="m-only"><p class="price">$40<small>/month</small></p><p class="save"></p></div>
+        <div class="a-only" hidden><p class="price">$400<small>/year</small></p><p class="save">Save $80 a year</p></div>
+        <a class="btn m-only" data-plan="premium-monthly" href="#demo">Choose Premium</a>
+        <a class="btn a-only" data-plan="premium-annual" href="#demo" hidden>Choose Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="cta-band" id="demo">
   <div class="wrap">
     <h2>Ready to capture more leads?</h2>
@@ -189,5 +233,17 @@ footer b{color:#fff}
     <p style="margin-top:6px">© 2026 Hynri LLC. All rights reserved.</p>
   </div>
 </footer>
+<script>
+document.querySelectorAll(".toggle button").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var period = button.dataset.period;
+    document.querySelectorAll(".toggle button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b === button));
+    });
+    document.querySelectorAll("#pricing .m-only").forEach(function (el) { el.hidden = period !== "m"; });
+    document.querySelectorAll("#pricing .a-only").forEach(function (el) { el.hidden = period !== "a"; });
+  });
+});
+</script>
 </body>
 </html>
