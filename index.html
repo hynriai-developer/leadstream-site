@@ -38,13 +38,12 @@ h1 em{font-style:normal;color:var(--orange)}
 .hero .ghost{color:#fff;border-color:#fff}
 .hero .ghost:hover{background:#fff;color:var(--navy)}
 .phone{width:270px;margin:0 auto;background:#062029;border-radius:34px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
-.screen{background:#fff;border-radius:24px;overflow:hidden;color:var(--ink)}
-.vid{background:linear-gradient(135deg,#0b3b4a,#07a9cc);height:150px;display:flex;align-items:center;justify-content:center;position:relative}
-.vid:after{content:"";border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:8px;opacity:.95}
-.screen h4{padding:12px 14px 6px;font-size:.95rem}
-.screen .m{margin:6px 12px;padding:10px 12px;border-radius:8px;background:var(--sky);font-size:.82rem;font-weight:600;color:var(--navy);display:flex;justify-content:space-between}
-.screen .m b{color:var(--red)}
-.screen .go{margin:10px 12px 14px;padding:11px;border-radius:8px;background:var(--red);color:#fff;text-align:center;font-weight:700;font-size:.85rem}
+.screen{position:relative;isolation:isolate;height:520px;background:var(--navy);border-radius:24px;overflow:hidden}
+/* a real agent page, drawn at phone width (390px) and shrunk to the 246px screen */
+.screen iframe{position:absolute;top:0;left:0;width:390px;height:825px;border:0;transform:scale(.6308);transform-origin:0 0;pointer-events:none}
+.screen a{position:absolute;inset:0;border-radius:24px}
+.screen a:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+.phone-cap{text-align:center;margin-top:16px;font-size:.88rem;color:#d3e8ee}
 section{padding:80px 0}
 .alt{background:#f4f9fa}
 h2{font-size:2.1rem;letter-spacing:-.6px;color:var(--navy);line-height:1.2;margin-bottom:14px}
@@ -135,13 +134,10 @@ footer b{color:#fff}
     </div>
     <div>
       <div class="phone"><div class="screen">
-        <div class="vid"></div>
-        <h4>Hi, I'm your agent. Let's find your next move.</h4>
-        <div class="m">Buying a home <b>→</b></div>
-        <div class="m">Selling my home <b>→</b></div>
-        <div class="m">Renting a property <b>→</b></div>
-        <div class="go">Get My Free Home Plan</div>
+        <iframe src="https://agnt4.me/ab1/" title="Live preview of an agent's LeadStream mobile page" scrolling="no" tabindex="-1" aria-hidden="true" sandbox="allow-scripts allow-same-origin"></iframe>
+        <a href="https://agnt4.me/ab1/" target="_blank" rel="noopener" aria-label="Open this live agent page"></a>
       </div></div>
+      <p class="phone-cap">A live agent page. Tap the phone to open it.</p>
     </div>
   </div>
 </div>
